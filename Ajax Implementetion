@@ -1,0 +1,12 @@
+jQuery.ajaxSetup ({
+
+        dataType: "html",
+        cache: false  
+    });    
+    var portfolioItemURL = "";  
+    jQuery(".flyer").click(
+        function(){
+            portfolioItemURL = jQuery(this).find("a").attr("MY_HREF") + '?tmpl=component&type=raw';
+            jQuery("#ajaxCallContainer").load(portfolioItemURL);
+        }
+); 
